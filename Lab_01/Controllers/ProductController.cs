@@ -22,12 +22,13 @@ namespace Lab_01.Controllers
             _hosting = hosting;
         }
         //Hiển thị danh sách sản phẩm
-        public IActionResult Index(int? page)
+        public IActionResult Index(int page)
         {
             var productList = _db.Products.Include(x => x.Category).ToList();
-            int pageIndex = page ?? 1;
+            int pageIndex = page;
             int pageSize = 5;
             ViewBag.PageSum = (int)Math.Ceiling((double)productList.Count / pageSize);
+            ViewBag.PageIndex = pageIndex;
             return View(productList.Skip((pageIndex -1 )*pageSize).Take(pageSize).ToList());
         }
         //Hiển thị form thêm sản phẩm mới

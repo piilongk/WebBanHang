@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Lab_01</title>
+    <title>@ViewData["Title"] - Web Bán Hàng</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
@@ -19,8 +19,15 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " asp-area="" asp-controller="Category" asp-action="Index">Categories Manager</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link " asp-area="" asp-controller="Product" asp-action="Index">Product Manager</a>
                         </li>
+
                     </ul>
                 </div>
             </div>
